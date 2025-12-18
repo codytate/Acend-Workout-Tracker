@@ -14,10 +14,41 @@ struct PersistenceController {
     static let preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
+        
+        // Create a sample active workout session
+        let activeSession = WorkoutSession(context: viewContext)
+        activeSession.startDate = Date().addingTimeInterval(-3600) // 1 hour ago
+        activeSession.endDate = nil
+        
+        // Add some sample workouts to the session
+        let workout1 = Workout(context: viewContext)
+        workout1.name = "Bench Press"
+        workout1.order = 0
+        workout1.session = activeSession
+        
+        let set1 = Set(context: viewContext)
+        set1.weight = 225
+        set1.reps = 8
+        set1.order = 0
+        set1.workout = workout1
+        
+        let set2 = Set(context: viewContext)
+        set2.weight = 225
+        set2.reps = 6
+        set2.order = 1
+        set2.workout = workout1
+        
+        let workout2 = Workout(context: viewContext)
+        workout2.name = "Incline Dumbbell Press"
+        workout2.order = 1
+        workout2.session = activeSession
+        
+        let set3 = Set(context: viewContext)
+        set3.weight = 80
+        set3.reps = 10
+        set3.order = 0
+        set3.workout = workout2
+        
         do {
             try viewContext.save()
         } catch {
