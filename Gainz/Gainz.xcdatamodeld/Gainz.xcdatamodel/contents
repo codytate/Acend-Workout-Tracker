@@ -3,7 +3,27 @@
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
+    <entity name="WorkoutSession" representedClassName="WorkoutSession" syncable="YES" codeGenerationType="class">
+        <attribute name="startDate" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="workouts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Workout" inverseName="session" inverseEntity="Workout"/>
+    </entity>
+    <entity name="Workout" representedClassName="Workout" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="NO" attributeType="String"/>
+        <attribute name="order" optional="NO" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <relationship name="sets" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Set" inverseName="workout" inverseEntity="Set"/>
+        <relationship name="session" optional="NO" maxCount="1" deletionRule="Nullify" destinationEntity="WorkoutSession" inverseName="workouts" inverseEntity="WorkoutSession"/>
+    </entity>
+    <entity name="Set" representedClassName="Set" syncable="YES" codeGenerationType="class">
+        <attribute name="order" optional="NO" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="reps" optional="NO" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="weight" optional="NO" attributeType="Double" usesScalarValueType="YES"/>
+        <relationship name="workout" optional="NO" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="sets" inverseEntity="Workout"/>
+    </entity>
     <elements>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="WorkoutSession" positionX="-63" positionY="9" width="128" height="75"/>
+        <element name="Workout" positionX="-36" positionY="36" width="128" height="89"/>
+        <element name="Set" positionX="9" positionY="63" width="128" height="89"/>
     </elements>
 </model>
