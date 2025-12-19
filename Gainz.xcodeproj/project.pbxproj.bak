@@ -8,8 +8,6 @@
 
 /* Begin PBXFileReference section */
 		164D95FD2EF3601900B3DDA0 /* Gainz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gainz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A3B95FD2EF3601900B3DDA1 /* GainzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GainzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A3B95FE2EF3601900B3DDA2 /* GainzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GainzTests.swift; path = Tests/GainzTests/GainzTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -36,7 +34,6 @@
 			children = (
 				164D95FF2EF3601900B3DDA0 /* Gainz */,
 				164D95FE2EF3601900B3DDA0 /* Products */,
-				2A3B95F12EF3601900B3DDA3 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -44,26 +41,8 @@
 			isa = PBXGroup;
 			children = (
 				164D95FD2EF3601900B3DDA0 /* Gainz.app */,
-				2A3B95FD2EF3601900B3DDA1 /* GainzTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		2A3B95F12EF3601900B3DDA3 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				2A3B95F22EF3601900B3DDA4 /* GainzTests */,
-			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
-		2A3B95F22EF3601900B3DDA4 /* GainzTests */ = {
-			isa = PBXGroup;
-			children = (
-				2A3B95FE2EF3601900B3DDA2 /* GainzTests.swift */,
-			);
-			name = GainzTests;
-			path = Tests/GainzTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,28 +69,6 @@
 			productName = Gainz;
 			productReference = 164D95FD2EF3601900B3DDA0 /* Gainz.app */;
 			productType = "com.apple.product-type.application";
-		};
-		2A3B95F62EF3601900B3DDA8 /* GainzTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2A3B960D2EF3601A00B3DDAF /* Build configuration list for PBXNativeTarget "GainzTests" */;
-			buildPhases = (
-				2A3B95F32EF3601900B3DDA5 /* Sources */,
-				2A3B95F42EF3601900B3DDA6 /* Frameworks */,
-				2A3B95F52EF3601900B3DDA7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				2A3B95F12EF3601900B3DDA3 /* Tests */,
-			);
-			name = GainzTests;
-			packageProductDependencies = (
-			);
-			productName = GainzTests;
-			productReference = 2A3B95FD2EF3601900B3DDA1 /* GainzTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -143,7 +100,6 @@
 			projectRoot = "";
 			targets = (
 				164D95FC2EF3601900B3DDA0 /* Gainz */,
-				2A3B95F62EF3601900B3DDA8 /* GainzTests */,
 			);
 		};
 /* End PBXProject section */
@@ -166,29 +122,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A3B95F52EF3601900B3DDA7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A3B95F42EF3601900B3DDA6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A3B95F32EF3601900B3DDA5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A3B95F72EF3601900B3DDA9 /* GainzTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A3B95F72EF3601900B3DDA9 /* GainzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B95FE2EF3601900B3DDA2 /* GainzTests.swift */; };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -255,54 +188,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
-		};
-		2A3B960B2EF3601A00B3DDAA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CWNX42RP8R;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Tate.GainzTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gainz.app/Gainz";
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				ENABLE_TESTABILITY = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		2A3B960C2EF3601A00B3DDAB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CWNX42RP8R;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Tate.GainzTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gainz.app/Gainz";
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				ENABLE_TESTABILITY = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
 		};
 		164D960C2EF3601A00B3DDA0 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -442,15 +327,6 @@
 			buildConfigurations = (
 				164D960E2EF3601A00B3DDA0 /* Debug */,
 				164D960F2EF3601A00B3DDA0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2A3B960D2EF3601A00B3DDAF /* Build configuration list for PBXNativeTarget "GainzTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2A3B960B2EF3601A00B3DDAA /* Debug */,
-				2A3B960C2EF3601A00B3DDAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
